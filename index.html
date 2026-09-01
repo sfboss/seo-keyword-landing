@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Intelligence Reports - Real keyword research from YouTube, Reddit & SERPs</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #ffffff;
+        }
+        
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 24px;
+            color: #000;
+        }
+        
+        .subtitle {
+            font-size: 1.25rem;
+            color: #666;
+            margin-bottom: 48px;
+            line-height: 1.5;
+        }
+        
+        .cta-box {
+            background: #f8f9fa;
+            border: 1px solid #e1e4e8;
+            border-radius: 8px;
+            padding: 32px;
+            margin-bottom: 48px;
+        }
+        
+        .price {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+        
+        input[type="email"],
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 1rem;
+            margin-bottom: 12px;
+        }
+        
+        button {
+            width: 100%;
+            padding: 14px;
+            background: #000;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background: #333;
+        }
+        
+        .small-text {
+            font-size: 0.875rem;
+            color: #666;
+            margin-top: 8px;
+        }
+        
+        h2 {
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin: 48px 0 24px 0;
+        }
+        
+        h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin: 32px 0 16px 0;
+        }
+        
+        p, li {
+            margin-bottom: 16px;
+            color: #374151;
+        }
+        
+        ul {
+            margin-left: 24px;
+            margin-bottom: 24px;
+        }
+        
+        .example-box {
+            background: #f9fafb;
+            border-left: 3px solid #000;
+            padding: 24px;
+            margin: 32px 0;
+        }
+        
+        .example-box p {
+            margin-bottom: 12px;
+        }
+        
+        .example-box strong {
+            color: #000;
+        }
+        
+        code {
+            background: #f3f4f6;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        
+        .divider {
+            height: 1px;
+            background: #e5e7eb;
+            margin: 48px 0;
+        }
+        
+        .footer {
+            margin-top: 64px;
+            padding-top: 32px;
+            border-top: 1px solid #e5e7eb;
+            color: #6b7280;
+            font-size: 0.875rem;
+        }
+        
+        .problem-section {
+            background: #fffbeb;
+            border: 1px solid #fcd34d;
+            border-radius: 8px;
+            padding: 24px;
+            margin: 32px 0;
+        }
+        
+        .faq {
+            margin-top: 48px;
+        }
+        
+        .faq-item {
+            margin-bottom: 24px;
+        }
+        
+        .faq-q {
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Find out what people actually search for, talk about, and ask</h1>
+        
+        <p class="subtitle">
+            Most keyword tools show you search volume. This shows you what real people say on YouTube, Reddit, and the actual search results.
+        </p>
+        
+        <div class="cta-box">
+            <div class="price">$47 per keyword report</div>
+            <input type="text" placeholder="Your seed keyword (e.g., 'project management software')" id="keyword">
+            <input type="email" placeholder="your@email.com" id="email">
+            <button onclick="handleSubmit()">Get Your Report</button>
+            <p class="small-text">Delivered within 24 hours. One-time payment. No subscription.</p>
+        </div>
+        
+        <h2>What you get</h2>
+        
+        <h3>Top 20 search results analysis</h3>
+        <p>I pull the actual page source from the first 20 Google results. Not just titles and meta descriptions—the full content. Then extract what topics they cover, how they structure it, and what they're missing.</p>
+        
+        <h3>YouTube video + comments analysis</h3>
+        <p>The top 5 YouTube videos for your keyword, plus all their comments. I use NLP to find the most common questions, complaints, and phrases people actually use when talking about this topic.</p>
+        
+        <h3>Reddit thread mining</h3>
+        <p>Up to 200 Reddit posts related to your keyword. Real conversations where people ask questions, share problems, and recommend solutions. This is where you find the language your audience actually uses.</p>
+        
+        <h3>Semantic keyword clusters</h3>
+        <p>Using YAKE (keyword extraction algorithm), I group related phrases and terms by meaning. Not just "project management" and "project management software"—but the actual related concepts people search for.</p>
+        
+        <div class="example-box">
+            <p><strong>Example: "email marketing tool"</strong></p>
+            <p><strong>YouTube insights:</strong> Top complaint is "too expensive for small lists". Most asked question: "does it integrate with Stripe?"</p>
+            <p><strong>Reddit insights:</strong> People hate complicated automation builders. They want simple broadcasts. Emerging term: "warm email" (not cold email).</p>
+            <p><strong>SERP gaps:</strong> Everyone covers features. Nobody covers "email marketing on $0 budget".</p>
+            <p><strong>Content ideas:</strong> 23 article topics, 8 YouTube video ideas, 5 comparison posts.</p>
+        </div>
+        
+        <div class="problem-section">
+            <h3 style="margin-top: 0;">The problem with traditional keyword research</h3>
+            <p>You get a spreadsheet with:</p>
+            <ul>
+                <li>"email marketing" - 50,000 searches/month</li>
+                <li>"email marketing tool" - 10,000 searches/month</li>
+                <li>"best email marketing" - 5,000 searches/month</li>
+            </ul>
+            <p>But you still don't know:</p>
+            <ul>
+                <li>What angle should I take?</li>
+                <li>What questions are people asking?</li>
+                <li>What do people actually complain about?</li>
+                <li>What's missing from existing content?</li>
+                <li>What language do real users use?</li>
+            </ul>
+        </div>
+        
+        <h2>Who this is for</h2>
+        <ul>
+            <li>You're building content for SEO but don't know what angle to take</li>
+            <li>You need to understand your audience's actual language and pain points</li>
+            <li>You want to see what's working for competitors without manually analyzing 20+ pages</li>
+            <li>You're tired of generic keyword lists that don't tell you what to actually write</li>
+        </ul>
+        
+        <h2>What you'll do with this report</h2>
+        <ul>
+            <li>Write content that answers the questions people are actually asking</li>
+            <li>Use the exact phrases your audience uses (not corporate jargon)</li>
+            <li>Find content gaps your competitors haven't covered</li>
+            <li>Build a content strategy based on real data, not guesses</li>
+        </ul>
+        
+        <div class="divider"></div>
+        
+        <div class="cta-box">
+            <div class="price">$47 per keyword report</div>
+            <input type="text" placeholder="Your seed keyword (e.g., 'project management software')" id="keyword2">
+            <input type="email" placeholder="your@email.com" id="email2">
+            <button onclick="handleSubmit()">Get Your Report</button>
+            <p class="small-text">Delivered within 24 hours. One-time payment. No subscription.</p>
+        </div>
+        
+        <div class="faq">
+            <h2>Common questions</h2>
+            
+            <div class="faq-item">
+                <div class="faq-q">How long does it take?</div>
+                <p>Usually 24 hours. Sometimes faster if I'm online when you order.</p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-q">What format do I get?</div>
+                <p>A detailed PDF report plus a spreadsheet with all the extracted keywords and phrases.</p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-q">Can I order multiple keywords?</div>
+                <p>Yes. Each keyword is $47. Order as many as you need.</p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-q">What if my keyword is too niche?</div>
+                <p>If there's not enough data on YouTube or Reddit, I'll let you know and we can adjust the keyword or I'll refund you.</p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-q">Is this just for English keywords?</div>
+                <p>Right now, yes. English only.</p>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-q">Do you use AI to generate the report?</div>
+                <p>I use NLP algorithms (YAKE) to extract keywords and cluster them. The insights and analysis are mine. You're paying for my interpretation of the data, not just raw numbers.</p>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Built by a developer who got tired of keyword tools that don't tell you what to actually write.</p>
+            <p>Questions? Email: your@email.com</p>
+        </div>
+    </div>
+    
+    <script>
+        function handleSubmit() {
+            const keyword = document.getElementById('keyword').value || document.getElementById('keyword2').value;
+            const email = document.getElementById('email').value || document.getElementById('email2').value;
+            
+            if (!keyword || !email) {
+                alert('Please enter both a keyword and your email address.');
+                return;
+            }
+            
+            // Here you would integrate with your payment processor
+            // For now, just show a message
+            alert(`Thanks! Send payment to [your payment method] and I'll start researching "${keyword}". I'll email the report to ${email} within 24 hours.`);
+        }
+    </script>
+</body>
+</html>
